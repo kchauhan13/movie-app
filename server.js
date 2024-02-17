@@ -1,5 +1,5 @@
 const express = require("express");
-const session = require("express-session");
+const session = require("cookie-session");
 const nocache = require("nocache");
 require("dotenv").config();
 
@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3500;
 
 app.use(
   session({
-    secret: "my-secret",
+    secret: 'disco dog',
     resave: false,
     saveUninitialized: false,
   })
